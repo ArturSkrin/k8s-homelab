@@ -1,0 +1,22 @@
+grafana:
+  enabled: true
+  adminPassword: admin12345
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - grafana.lab
+
+prometheus:
+  prometheusSpec:
+    retention: 3d
+    retentionSize: 3GB
+
+alertmanager:
+  enabled: true
+
+kube-state-metrics:
+  enabled: true
+
+prometheus-node-exporter:
+  enabled: true
